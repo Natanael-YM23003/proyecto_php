@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: imagen-prueba
+    container_name: proyecto-server
+    restart: always
+    ports:
+      - "8068:80"
+    volumes:
+      - .:/var/www/html
